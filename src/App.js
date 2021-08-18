@@ -102,14 +102,10 @@ function App() {
   }, [selectedCountryId]);
 
   useEffect(() => {
-    const filteredCountries = countries.filter((country) => {
-      return country.dataSetId == selectedDataSetId;
-    });
     const filteredUsers = users.filter((user) => {
       return user.dataSetId == selectedDataSetId;
     });
     setSelectedCountryId(-1);
-    setCountriesState(filteredCountries);
     setUsersState(filteredUsers);
   }, [selectedDataSetId]);
 
